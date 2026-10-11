@@ -48,7 +48,7 @@ ReLeaf is an Android application designed to encourage sustainable living throug
 
 The Django backend is maintained separately.
 
-**Backend source code:** [Add your backend repository link here](BACKEND_REPOSITORY_URL)
+**Backend source code:** [Backend Link](https://github.com/lalsingh58/Releaf-backend)
 
 ### Run the Backend Locally
 
