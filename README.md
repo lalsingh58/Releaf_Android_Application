@@ -1,58 +1,35 @@
-# 🌱 ReLeaf — Smart Environmental Awareness App
+# 🌱 ReLeaf — Environmental Awareness Android App
 
-ReLeaf is an Android application designed to encourage environmentally friendly actions through air-quality monitoring, action tracking, and community rankings.
+ReLeaf is an Android application designed to encourage sustainable living through air-quality monitoring, environmental action tracking, and community engagement.
+
+## 📥 Download the Android App
+
+**Latest APK:** [Download ReLeaf.apk](output/ReLeaf.apk)
+
+### Installation Instructions
+
+1. Download `ReLeaf.apk` from the `output` folder in this repository.
+2. Transfer the APK to your Android phone if you downloaded it on your computer.
+3. Open the APK file on your phone.
+4. Allow installation from that source if Android asks for permission.
+5. Install and launch ReLeaf.
+6. Register an account or log in to access the app.
+
+> **Important:** ReLeaf requires a running, reachable backend for authentication and its API-powered features. Installing the APK alone does not start the backend.
 
 ## ✨ Features
 
-- 🌍 **Air Quality Monitoring** — View the Air Quality Index (AQI) for your location.
-- 🌱 **Environmental Actions** — Submit Plant and Water actions with photo proof.
-- 📊 **Impact Tracking** — Track points, levels, and activity streaks.
-- 📜 **My Actions** — Review previously submitted environmental actions.
-- 🏆 **Leaderboard** — Compare environmental impact with other users.
-- 👤 **User Profile** — Manage your profile and view your progress.
-- 🔐 **Authentication** — Register and log in to your account.
-
-## 📱 How to Access ReLeaf
-
-### Option 1: Install the Android APK
-
-1. Open the [ReLeaf GitHub repository](https://github.com/lalsingh58/Releaf_Android_Application).
-2. Open the **Releases** section.
-3. Download the latest `ReLeaf.apk` file from the release assets.
-4. Open the downloaded APK on your Android phone.
-5. If prompted, allow installation from that source in Android settings.
-6. Complete the installation and open ReLeaf.
-7. Register a new account or log in.
-
-**Note:** An APK must be built and uploaded to GitHub Releases before users can install the app this way. The source code alone is not an installable Android application.
-
-### Option 2: Build from Source
-
-**Requirements**
-- Android Studio
-- Android SDK compatible with the project
-- JDK compatible with the project's Gradle configuration
-- Internet connection
-- Access to the ReLeaf Django backend
-
-**Steps**
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/ReLeaf.git
-   ```
-
-2. Open the cloned project in Android Studio.
-3. Allow Gradle to sync and download the required dependencies.
-4. Configure the backend URL in `ApiClient.java`.
-5. Ensure the Django backend is running and accessible.
-6. Connect an Android phone with USB debugging enabled, or use an emulator.
-7. Click **Run** in Android Studio.
+- 🌍 **AQI Monitoring:** View air-quality information for your location.
+- 🌱 **Environmental Actions:** Submit Plant and Water actions with photo proof.
+- ⭐ **Impact Tracking:** Track points, levels, and activity streaks.
+- 📜 **Action History:** View previously submitted environmental actions.
+- 🏆 **Leaderboard:** Compare points and rankings with other users.
+- 👤 **User Profile:** Manage your profile and environmental progress.
+- 🔐 **Authentication:** Register and log in securely.
 
 ## 🛠️ Technology Stack
 
-### Android Application
+### Android Frontend
 - Java
 - XML layouts
 - Android Studio
@@ -67,19 +44,69 @@ ReLeaf is an Android application designed to encourage environmentally friendly 
 - Django REST Framework
 - JWT authentication
 
-## 🔌 Backend Configuration
+## 🔗 Backend Repository
 
-ReLeaf requires a reachable Django backend for authentication, AQI-related API requests, action submissions, statistics, action history, and leaderboard data.
+The Django backend is maintained separately.
 
-For local Android development, configure the API base URL appropriately. A physical Android phone cannot normally access the development computer's `127.0.0.1` address directly; use a reachable development-host address or an appropriate ADB reverse configuration.
+**Backend source code:** [Add your backend repository link here](BACKEND_REPOSITORY_URL)
 
-For production, configure the app to use your deployed HTTPS backend.
+### Run the Backend Locally
 
-**Security:** Never commit Django secret keys, database passwords, JWT signing secrets, private API credentials, or production `.env` files to GitHub.
+1. Clone the backend repository:
 
-## 🚧 Project Status
+   ```bash
+   git clone BACKEND_REPOSITORY_URL
+   ```
 
-ReLeaf is under active development. Features and API availability may change as development continues.
+2. Open the backend project directory.
+
+3. Create and activate a Python virtual environment.
+
+4. Install the dependencies listed in the backend's `requirements.txt`.
+
+5. Configure the required environment variables, database, and other backend settings according to the backend repository's instructions.
+
+6. Apply migrations and start the Django server:
+
+   ```bash
+   python manage.py migrate
+   python manage.py runserver
+   ```
+
+   These commands assume the backend uses the standard Django project structure and that its environment and database have been configured.
+
+7. Configure the Android app to use the backend's reachable API base URL.
+
+> For local testing, `127.0.0.1` on an Android phone refers to the phone itself, not your development computer. Use an appropriate development connection or a deployed backend URL.
+
+## 🚀 Build the Android APK
+
+To build the debug APK from source, open the Android project in Android Studio and run:
+
+**Windows PowerShell:**
+
+```powershell
+.\gradlew.bat assembleDebug
+```
+
+The generated APK is normally located at:
+
+```text
+app/build/outputs/apk/debug/app-debug.apk
+```
+
+Copy it into the `output` directory and rename it to `ReLeaf.apk` when preparing an updated download.
+
+## 🔒 Security
+
+- Never commit passwords, Django secret keys, database credentials, JWT signing secrets, or private API keys.
+- Keep sensitive configuration in environment variables.
+- Use HTTPS for a publicly deployed backend.
+- A debug APK is intended primarily for testing; prepare a signed release build for public distribution.
+
+## 📌 Project Status
+
+ReLeaf is under active development. Features and backend availability may change as development continues.
 
 ## 👨‍💻 Developer
 
@@ -87,4 +114,4 @@ Developed as an environmental awareness and sustainability project.
 
 ## 📄 License
 
-Add your chosen open-source license here if you intend to distribute the project under one.
+Specify a license if you intend to distribute the source code under an open-source license.
