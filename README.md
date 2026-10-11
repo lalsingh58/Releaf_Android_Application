@@ -16,7 +16,7 @@ ReLeaf is an Android application designed to encourage environmentally friendly 
 
 ### Option 1: Install the Android APK
 
-1. Open the [ReLeaf GitHub repository](https://github.com/YOUR_USERNAME/ReLeaf).
+1. Open the [ReLeaf GitHub repository](https://github.com/lalsingh58/Releaf_Android_Application).
 2. Open the **Releases** section.
 3. Download the latest `ReLeaf.apk` file from the release assets.
 4. Open the downloaded APK on your Android phone.
